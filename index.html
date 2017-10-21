@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Angular Assignment</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"></link>
+    <link rel="stylesheet" type="text/css" href="css/style.css"></link>
+
+    <script src='lib/angular.min.js'></script>
+    <script src='lib/jquery-1.11.3.min.js'></script>
+    <script src='lib/jquery.ui.touch-punch.min.js'></script>
+    <script src='lib/jquery.min.js'></script>
+    <script src='lib/bootstrap.min.js'></script>
+    <script src='lib/maps.js'></script>
+    <script type="text/javascript" src="js/core.js"></script>
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBlEYORCg-awnoO5lZTgUqKI55ZRLQp-_4"></script> -->
+</head>
+
+<body>
+    <div ng-app="myApp" ng-controller="myController">
+        <div class="title container-fluid row">
+            Angular Assignment
+        </div>
+
+        <div class="container-fluid text-center">
+            <div class="row content">
+                <div class="col-sm-3 sidenav">
+                    <input type="text" class="form-control addInput" placeholder="Search" ng-model="inputText">
+                    <div class="addButton" ng-click="onAddClick()"></div>
+                    <br>
+                    <br>
+                    <div class="links" ng-click="onLinkClick(x._id, x.name)" ng-repeat="x in location">
+                        <span class="myText">{{x.name}}</span>
+                        <div class="removeButton" ng-click="onRemoveClick(x._id, x.name, $event)"></div>
+                    </div>
+                </div>
+                <div class="col-sm-9 text-left" style="padding-right:0px">
+                    <div id="map"></div>
+                    <div class="description">
+                        <h1 ng-bind="descriptionHeading" class="heading"></h1>
+                        <p ng-bind="descriptionText"></p>
+                        <div class="closeButton" ng-click="onClose()"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="container-fluid text-center">
+            <p>Footer Text</p>
+        </footer>
+    </div>
+</body>
+
+</html>
+<script>
+    $(document).ready(function() {
+        $(".row.content").css({
+            height: window.outerHeight + "px"
+        });
+    });
+</Script>

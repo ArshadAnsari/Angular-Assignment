@@ -1,0 +1,131 @@
+.title {
+    height: 50px;
+    font-size: 26px;
+    padding-top: 6px;
+    padding-left: 15px;
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+.row.content {
+    height: 450px;
+    margin-right: 0px;
+    margin-left: 0px;
+    /* margin-bottom: 50px */
+}
+
+.sidenav {
+    padding-top: 20px;
+    background-color: #e0e0e0;
+    height: 100%;
+    text-align: left;
+    overflow-y: scroll;
+}
+
+footer {
+    background-color: #555;
+    color: white;
+    padding: 15px;
+}
+
+@media screen and (max-width: 767px) {
+    .sidenav {
+        height: auto;
+        padding: 15px;
+    }
+    .row.content {
+        height: auto;
+    }
+    #map {
+        height: auto;
+    }
+}
+
+#map {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    margin-bottom: 15px
+}
+
+.links {
+    cursor: pointer;
+    /* background: #00F; */
+    height: 30px;
+    /* padding: 5px; */
+    width: 86.5%;
+    margin-bottom: 10px;
+}
+
+.myText {
+    padding-top: 5px;
+    padding-left: 5px;
+    position: absolute;
+}
+
+.links:hover {
+    background: #CCC;
+}
+
+.links.selected {
+    background: #CCC;
+}
+
+.description {
+    width: 100%;
+    display: none;
+}
+
+.heading {
+    text-decoration: underline;
+}
+
+.closeButton {
+    height: 30px;
+    /* background-color: #000; */
+    width: 30px;
+    position: absolute;
+    top: 20px;
+    right: 0px;
+    cursor: pointer;
+    background-image: url(../images/circle-close-128.png);
+    background-size: 100% 100%;
+}
+
+.closeButton:hover {
+    opacity: 0.5
+}
+
+.addInput {
+    display: inline;
+    width: 80%
+}
+
+.addButton {
+    background-image: url(../images/add_button_2-512.png);
+    background-size: 100% 100%;
+    display: inline;
+    width: 34px;
+    height: 34px;
+    position: absolute;
+    right: 15px;
+    cursor: pointer;
+}
+
+.addButton:hover {
+    opacity: 0.5
+}
+
+.removeButton {
+    display: inline;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 15px;
+    background-image: url(../images/button.png);
+    background-size: 100% 100%;
+}
+
+.removeButton:hover {
+    opacity: 0.5
+}
